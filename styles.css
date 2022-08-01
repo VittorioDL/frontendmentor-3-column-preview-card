@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --card-bg1: hsl(31, 77%, 52%);
+    --card-bg2: hsl(184, 100%, 22%);
+    --card-bg3: hsl(179, 100%, 13%);
+    --main-bg: hsl(0, 0%, 95%);
+
+    --clr-paragraph: hsla(0, 0%, 100%, 0.75);
+    --font-size: 15px;
+
+    --ff-700: 'Big Shoulders Display', cursive;
+    --ff-400: 'Lexend Deca', sans-serif;
+}
+
+html{
+    font-size: var(--font-size);
+}
+
+.container{
+    background-color: var(--main-bg);
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 900px;
+    margin: 5rem 2rem;
+    border-radius: 0.7rem;
+    overflow: hidden;
+}
+
+.card{
+    text-align: left;
+    color: var(--clr-paragraph);
+    padding: 3rem;
+}
+
+.card__heading{
+    font-family: var(--ff-700);
+    text-transform: uppercase;
+    font-family: 700;
+    font-size: 2.5rem;
+    color: var(--main-bg);
+    margin: 1.5rem 0;
+}
+
+.card__paragraph{
+    font-family: var(--ff-400);
+    font-weight: 400;
+    margin-bottom: 6rem;
+    line-height: 1.8rem;
+}
+
+.card__button{
+    background-color: var(--main-bg);
+    width: 10rem;
+    border-radius: 5rem;
+    border-style: none;
+    font-family: var(--ff-400);
+    padding: 0.7rem 1.8rem;
+    border: 3px solid transparent;
+}
+
+.card__button:hover{
+    background-color: transparent;
+    color: var(--clr-paragraph);
+    border: 3px solid var(--clr-paragraph);
+    cursor: pointer;
+}
+
+.btn-1{color: var(--card-bg1);}
+.btn-2{color: var(--card-bg2);}
+.btn-3{color: var(--card-bg3);}
+
+.bg-orange{background-color: var(--card-bg1);}
+.bg-dark-cyan{background-color: var(--card-bg2);}
+.bg-very-dark-cyan{background-color: var(--card-bg3);}
+
+@media (max-width: 785px) {
+    .card__container{
+        width: 300px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .card__paragraph{
+        margin-bottom: 2rem;
+    }
+    .card{height: auto;}
+}
